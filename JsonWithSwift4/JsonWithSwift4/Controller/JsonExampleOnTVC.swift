@@ -9,17 +9,20 @@
 import UIKit
 
 class JsonExampleOnTVC: UITableViewController {
+    
+    var newCourse:[Course] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         getDataWithURLSession()
+        
     }
+    
 
     // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return newCourse.count
     }
 
     
@@ -27,29 +30,37 @@ class JsonExampleOnTVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "jsonCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = "Zeile \(indexPath.row)"
-
+        cell.textLabel?.text = "Course id: \(newCourse[indexPath.row].id)" +
+                              "Cours Name: \(newCourse[indexPath.row].name)"
+    
         return cell
     }
     
     private func getDataWithURLSession(){
         guard let url = URL(string: JSON_EXAMPLE_ONE_URL) else {return}
         
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let urlSession = URLSession.shared.dataTask(with: url) { (data, response, error) in
             //TODO: - check Error
             
             //TODO: - response Status 200 Ok
             
-            self.convertDataToString(data: data)
-        }.resume()
+            //Swift 4
+            self.decodeJson(data: data)
+        }
+        urlSession.resume()
     }
     
-    private func convertDataToString(data: Data?) {
+    private func decodeJson(data:Data?) {
         guard let data = data else {return}
-        
-        let dataAsString = String(data: data, encoding: .utf8)
-        
-        print(dataAsString)
-    
+        do {
+            let course = try JSONDecoder().decode(Course.self, from: data)
+            newCourse.append(course)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            
+        } catch let jsonError {
+            //TODO: - ErrorHandling
+        }
     }
 }
