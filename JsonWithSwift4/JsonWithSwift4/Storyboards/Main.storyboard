@@ -46,6 +46,16 @@
                                     <segue destination="fve-c3-umI" kind="show" id="Fpw-Ie-aPD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHO-ZW-y7h">
+                                <rect key="frame" x="0.0" y="304" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Lfw-Q1-uLw"/>
+                                </constraints>
+                                <state key="normal" title="JSON Example Three"/>
+                                <connections>
+                                    <segue destination="dme-Q0-QIC" kind="show" id="Bbr-58-sQn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -54,10 +64,13 @@
                             <constraint firstItem="lbf-O5-KtA" firstAttribute="top" secondItem="GAi-gh-F6e" secondAttribute="bottom" constant="50" id="N5o-ur-15F"/>
                             <constraint firstItem="lbf-O5-KtA" firstAttribute="leading" secondItem="2xd-cw-gJq" secondAttribute="leading" id="Ql0-Xt-6os"/>
                             <constraint firstItem="GAi-gh-F6e" firstAttribute="leading" secondItem="2xd-cw-gJq" secondAttribute="leading" id="VMo-lO-R0v"/>
+                            <constraint firstItem="2xd-cw-gJq" firstAttribute="trailing" secondItem="OHO-ZW-y7h" secondAttribute="trailing" id="gHZ-vp-1rR"/>
                             <constraint firstItem="GAi-gh-F6e" firstAttribute="top" secondItem="2xd-cw-gJq" secondAttribute="top" id="mkV-Hw-lA8"/>
+                            <constraint firstItem="OHO-ZW-y7h" firstAttribute="top" secondItem="2tB-wg-aAW" secondAttribute="bottom" constant="30" id="ntV-av-6Lz"/>
                             <constraint firstItem="2xd-cw-gJq" firstAttribute="trailing" secondItem="lbf-O5-KtA" secondAttribute="trailing" id="tei-4H-Oaa"/>
                             <constraint firstItem="2tB-wg-aAW" firstAttribute="leading" secondItem="2xd-cw-gJq" secondAttribute="leading" id="vgB-GT-1o2"/>
                             <constraint firstItem="2xd-cw-gJq" firstAttribute="trailing" secondItem="GAi-gh-F6e" secondAttribute="trailing" id="xes-9V-t3W"/>
+                            <constraint firstItem="OHO-ZW-y7h" firstAttribute="leading" secondItem="2xd-cw-gJq" secondAttribute="leading" id="zDj-bB-PXa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2xd-cw-gJq"/>
                     </view>
@@ -66,6 +79,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAM-8y-gGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="566" y="94"/>
+        </scene>
+        <!--Json Example ThreeTVC-->
+        <scene sceneID="2vm-Ug-lwz">
+            <objects>
+                <tableViewController id="dme-Q0-QIC" customClass="JsonExampleThreeTVC" customModule="JsonWithSwift4" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BUj-my-l8w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="jsonCellThree" id="toF-7a-7a7">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="toF-7a-7a7" id="5V0-dA-iCm">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dme-Q0-QIC" id="3Ys-Sd-dNO"/>
+                            <outlet property="delegate" destination="dme-Q0-QIC" id="opm-ro-Ghj"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C5B-n5-ALM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1577" y="379"/>
         </scene>
         <!--Json Example TwoTVC-->
         <scene sceneID="43s-Bd-XwE">
@@ -93,7 +134,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4B-dR-VzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1383" y="87"/>
+            <point key="canvasLocation" x="2681" y="-518"/>
         </scene>
         <!--Json Example OnTVC-->
         <scene sceneID="dVC-RC-t9T">
