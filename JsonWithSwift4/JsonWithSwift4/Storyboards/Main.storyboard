@@ -36,14 +36,27 @@
                                     <segue destination="SmE-5W-E4E" kind="show" id="xQ8-bM-0SL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tB-wg-aAW">
+                                <rect key="frame" x="0.0" y="224" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Tpv-gc-qaY"/>
+                                </constraints>
+                                <state key="normal" title="JSON Example Two"/>
+                                <connections>
+                                    <segue destination="fve-c3-umI" kind="show" id="Fpw-Ie-aPD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2xd-cw-gJq" firstAttribute="trailing" secondItem="2tB-wg-aAW" secondAttribute="trailing" id="1gt-Ns-ayU"/>
+                            <constraint firstItem="2tB-wg-aAW" firstAttribute="top" secondItem="lbf-O5-KtA" secondAttribute="bottom" constant="30" id="FzX-t0-BIX"/>
                             <constraint firstItem="lbf-O5-KtA" firstAttribute="top" secondItem="GAi-gh-F6e" secondAttribute="bottom" constant="50" id="N5o-ur-15F"/>
                             <constraint firstItem="lbf-O5-KtA" firstAttribute="leading" secondItem="2xd-cw-gJq" secondAttribute="leading" id="Ql0-Xt-6os"/>
                             <constraint firstItem="GAi-gh-F6e" firstAttribute="leading" secondItem="2xd-cw-gJq" secondAttribute="leading" id="VMo-lO-R0v"/>
                             <constraint firstItem="GAi-gh-F6e" firstAttribute="top" secondItem="2xd-cw-gJq" secondAttribute="top" id="mkV-Hw-lA8"/>
                             <constraint firstItem="2xd-cw-gJq" firstAttribute="trailing" secondItem="lbf-O5-KtA" secondAttribute="trailing" id="tei-4H-Oaa"/>
+                            <constraint firstItem="2tB-wg-aAW" firstAttribute="leading" secondItem="2xd-cw-gJq" secondAttribute="leading" id="vgB-GT-1o2"/>
                             <constraint firstItem="2xd-cw-gJq" firstAttribute="trailing" secondItem="GAi-gh-F6e" secondAttribute="trailing" id="xes-9V-t3W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2xd-cw-gJq"/>
@@ -53,6 +66,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAM-8y-gGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="566" y="94"/>
+        </scene>
+        <!--Json Example TwoTVC-->
+        <scene sceneID="43s-Bd-XwE">
+            <objects>
+                <tableViewController id="fve-c3-umI" customClass="JsonExampleTwoTVC" customModule="JsonWithSwift4" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uPZ-UU-bY5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="jsonCellTwo" id="eGW-MV-q0l">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eGW-MV-q0l" id="jEo-iB-Y1W">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fve-c3-umI" id="7oS-di-uJL"/>
+                            <outlet property="delegate" destination="fve-c3-umI" id="6wE-lS-y52"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U4B-dR-VzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1383" y="87"/>
         </scene>
         <!--Json Example OnTVC-->
         <scene sceneID="dVC-RC-t9T">
@@ -81,7 +122,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZaF-Eh-uGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1342" y="93"/>
+            <point key="canvasLocation" x="1390" y="-593"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oYn-Ld-mS0">
