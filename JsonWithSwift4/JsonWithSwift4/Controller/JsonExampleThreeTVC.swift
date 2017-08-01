@@ -51,6 +51,7 @@ class JsonExampleThreeTVC: UITableViewController {
     
     private func decodeJson(data:Data?) {
         guard let data = data else {return}
+        dump(data)
         do {
             let websiteDescription = try JSONDecoder().decode(WebsiteDescription.self, from: data)
             for course in websiteDescription.courses {
