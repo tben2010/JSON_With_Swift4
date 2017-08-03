@@ -44,6 +44,7 @@ class JsonMovieTVC: UITableViewController {
             let movieController = segue.destination as? MovieVC
             if let indexPath = tableView.indexPathForSelectedRow {
                 if let asset = newAssets[indexPath.row] as? Asset {
+                    movieController?.movieURL = asset.url
                     movieController?.movieLabel = asset.accessibilityLabel
                 }
             }

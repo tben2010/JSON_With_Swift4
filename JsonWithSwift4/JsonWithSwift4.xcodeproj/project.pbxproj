@@ -18,6 +18,10 @@
 		A5195BAA1F2C83B100922BBB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5195BA91F2C83B100922BBB /* Constants.swift */; };
 		A5195BAC1F2C84FB00922BBB /* JsonExampleOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5195BAB1F2C84FB00922BBB /* JsonExampleOne.swift */; };
 		A5195BAE1F2C878000922BBB /* JsonExampleOnTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5195BAD1F2C878000922BBB /* JsonExampleOnTVC.swift */; };
+		A52504031F335B2A00D7CCB0 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52504021F335B2A00D7CCB0 /* Video.swift */; };
+		A52504051F335C3F00D7CCB0 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52504041F335C3F00D7CCB0 /* Download.swift */; };
+		A52504071F335D4C00D7CCB0 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52504061F335D4C00D7CCB0 /* DownloadService.swift */; };
+		A52504091F335F8200D7CCB0 /* MovieVC+URLSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52504081F335F8200D7CCB0 /* MovieVC+URLSessionDelegate.swift */; };
 		A547826D1F31030F00EF4258 /* JsonMovieTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547826C1F31030F00EF4258 /* JsonMovieTVC.swift */; };
 		A547826F1F31039F00EF4258 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547826E1F31039F00EF4258 /* Movie.swift */; };
 		A54782711F310A2900EF4258 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54782701F310A2900EF4258 /* Asset.swift */; };
@@ -38,6 +42,10 @@
 		A5195BA91F2C83B100922BBB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A5195BAB1F2C84FB00922BBB /* JsonExampleOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonExampleOne.swift; sourceTree = "<group>"; };
 		A5195BAD1F2C878000922BBB /* JsonExampleOnTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonExampleOnTVC.swift; sourceTree = "<group>"; };
+		A52504021F335B2A00D7CCB0 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		A52504041F335C3F00D7CCB0 /* Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		A52504061F335D4C00D7CCB0 /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
+		A52504081F335F8200D7CCB0 /* MovieVC+URLSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieVC+URLSessionDelegate.swift"; sourceTree = "<group>"; };
 		A547826C1F31030F00EF4258 /* JsonMovieTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonMovieTVC.swift; sourceTree = "<group>"; };
 		A547826E1F31039F00EF4258 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		A54782701F310A2900EF4258 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
@@ -91,6 +99,8 @@
 				A510E4991F30CD41001BCBBD /* JsonExampleThree.swift */,
 				A547826E1F31039F00EF4258 /* Movie.swift */,
 				A54782701F310A2900EF4258 /* Asset.swift */,
+				A52504021F335B2A00D7CCB0 /* Video.swift */,
+				A52504041F335C3F00D7CCB0 /* Download.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,6 +121,7 @@
 				A510E4971F30CCD1001BCBBD /* JsonExampleThreeTVC.swift */,
 				A547826C1F31030F00EF4258 /* JsonMovieTVC.swift */,
 				A54782721F31117700EF4258 /* MovieVC.swift */,
+				A52504081F335F8200D7CCB0 /* MovieVC+URLSessionDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,6 +132,7 @@
 				A5195B8E1F2C81C600922BBB /* AppDelegate.swift */,
 				A5195B951F2C81C600922BBB /* Assets.xcassets */,
 				A5195BA91F2C83B100922BBB /* Constants.swift */,
+				A52504061F335D4C00D7CCB0 /* DownloadService.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -207,13 +219,17 @@
 			files = (
 				A5195B8F1F2C81C600922BBB /* AppDelegate.swift in Sources */,
 				A54782711F310A2900EF4258 /* Asset.swift in Sources */,
+				A52504091F335F8200D7CCB0 /* MovieVC+URLSessionDelegate.swift in Sources */,
 				A510E4981F30CCD1001BCBBD /* JsonExampleThreeTVC.swift in Sources */,
 				A547826D1F31030F00EF4258 /* JsonMovieTVC.swift in Sources */,
 				A510E4961F30C889001BCBBD /* JsonExampleTwoTVC.swift in Sources */,
+				A52504071F335D4C00D7CCB0 /* DownloadService.swift in Sources */,
+				A52504051F335C3F00D7CCB0 /* Download.swift in Sources */,
 				A547826F1F31039F00EF4258 /* Movie.swift in Sources */,
 				A5195BAE1F2C878000922BBB /* JsonExampleOnTVC.swift in Sources */,
 				A5195BA81F2C829100922BBB /* MainVC.swift in Sources */,
 				A5195BAA1F2C83B100922BBB /* Constants.swift in Sources */,
+				A52504031F335B2A00D7CCB0 /* Video.swift in Sources */,
 				A54782731F31117700EF4258 /* MovieVC.swift in Sources */,
 				A5195BAC1F2C84FB00922BBB /* JsonExampleOne.swift in Sources */,
 				A510E49A1F30CD41001BCBBD /* JsonExampleThree.swift in Sources */,
